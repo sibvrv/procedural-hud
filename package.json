@@ -4,7 +4,12 @@
   "description": "A simple procedural HUD generator",
   "main": "index.js",
   "scripts": {
-    "test": "echo \"Error: no test specified\" && exit 1"
+    "start": "rollup --config rollup.live.js --watch",
+    "build": "rollup --config rollup.config.js",
+    "watch": "rollup --config rollup.config.js --watch",
+    "test": "echo \"Error: no test specified\" && exit 1",
+    "fix": "eslint ./Source --fix",
+    "lint": "eslint ./Source --ext .js,.jsx,.ts,.tsx --cache"
   },
   "repository": {
     "type": "git",
@@ -16,5 +21,16 @@
   "bugs": {
     "url": "https://github.com/sibvrv/procedural-hud/issues"
   },
-  "homepage": "https://www.sibvrv.com/"
+  "homepage": "https://www.sibvrv.com/",
+  "devDependencies": {
+    "@rollup/plugin-typescript": "^8.3.1",
+    "@typescript-eslint/eslint-plugin": "^5.16.0",
+    "@typescript-eslint/parser": "^5.16.0",
+    "eslint": "^8.11.0",
+    "rollup": "^2.70.0",
+    "rollup-plugin-livereload": "^2.0.5",
+    "rollup-plugin-serve": "^1.1.0",
+    "tslib": "^2.3.1",
+    "typescript": "^4.6.3"
+  }
 }
